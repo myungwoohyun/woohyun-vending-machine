@@ -77,7 +77,7 @@ main {
   text-align: center;
 }
 .section-vending-machine .con-wrap .payment {
-  margin-top: 4rem;
+  margin-top: 6rem;
 }
 .section-vending-machine .con-wrap .payment > div {
   display: flex;
@@ -98,7 +98,7 @@ main {
   flex: 100%;
 }
 .section-vending-machine .con-wrap .drink {
-  margin-top: 6rem;
+  margin-top: 8rem;
 }
 .section-vending-machine .con-wrap .drink ul {
   margin-top: 1rem;

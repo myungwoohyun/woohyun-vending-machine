@@ -26,8 +26,7 @@
  │    ├── vendingMachine.js // 자판기 스크립트 파일
  ├── package.json  // 프로젝트 설정 파일
  ├── jest.config.js  // Jest 환경 설정 파일
- ├── index.html  // 상품 수량 설정 페이지
- ├── vendingMachine.html  // 자판기 페이지
+ ├── index.html  // 상품 수량 설정 및 자판기 페이지
 ````
 
 ## ⚙️ 실행 방법

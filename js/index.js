@@ -1,4 +1,5 @@
 'use strict';
+import vmInstance from "./vendingMachine.js";
 
 document.addEventListener("DOMContentLoaded", () => {
     const stockFormModal = document.getElementById("sectionModal");
@@ -19,6 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 const updatedStock = JSON.parse(localStorage.getItem("vendingMachineStock")) || {};
                 updatedStock[type] = elm.value;
                 localStorage.setItem("vendingMachineStock", JSON.stringify(updatedStock));
+                vmInstance.updateStock(updatedStock);
             });
         });
     };

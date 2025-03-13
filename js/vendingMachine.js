@@ -6,8 +6,18 @@ class VendingMachine {
         this.isCardPayment = false;
         this.messageElement = document.getElementById("message");
         this.balanceElement = document.getElementById("balance");
-        this.stock = JSON.parse(localStorage.getItem("vendingMachineStock")) || { "cola": 5, "water": 5, "coffee": 5 };
+        try {
+            this.stock = JSON.parse(localStorage.getItem("vendingMachineStock")) || { "cola": 5, "water": 5, "coffee": 5 };
+        } catch (error) {
+            this.stock = { "cola": 5, "water": 5, "coffee": 5 };
+        }
         this.init();
+    }
+
+    updateStock(newStock) {
+        this.stock = newStock;
+        localStorage.setItem("vendingMachineStock", JSON.stringify(newStock));
+        this.updateUI("재고가 업데이트되었습니다.");
     }
 
     insertMoney(amount) {
@@ -35,6 +45,7 @@ class VendingMachine {
                 this.balance -= price;
             }
             this.stock[name]--;
+            console.log(`구매 후 재고:`, this.stock);
             localStorage.setItem("vendingMachineStock", JSON.stringify(this.stock));
             this.updateUI(`${name}를 구매했습니다. 남은 잔액: ${this.balance}원 (남은 재고: ${this.stock[name]}개)`);
             this.isCardPayment = false;
@@ -61,4 +72,8 @@ class VendingMachine {
         document.getElementById("btn-coffee")?.addEventListener("click", () => this.purchaseProduct(700, "coffee"));
     }
 }
-export default VendingMachine;
+
+export { VendingMachine };
+
+const vmInstance = new VendingMachine();
+export default vmInstance;
