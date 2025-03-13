@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Press+Start+2P&display=swap");
+body {
+  background: radial-gradient(47.72% 108.66% at -12.1% 21.18%, rgba(129, 219, 219, 0.25) 24.27%, rgba(160, 232, 232, 0) 100%), radial-gradient(76.64% 192.13% at 107.15% 116.7%, rgba(255, 178, 167, 0.25) 0%, rgba(201, 191, 255, 0.25) 74.61%), rgb(255, 255, 255);
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 6.4rem;
+  background: #FFF;
+}
+
+main {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.section-vending-machine {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+  width: 100vw;
+  margin: 0 auto;
+  padding: 8rem 0;
+}
+.section-vending-machine h2 {
+  width: 60rem;
+  max-width: calc(100% - 4rem);
+  font-size: 2.4rem;
+  font-weight: 600;
+  text-align: center;
+  color: #111;
+}
+.section-vending-machine #btnStock {
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 4.8rem;
+  padding: 0 3.2rem;
+  color: #FFF;
+  background: #8169FF;
+  border-radius: 0.8rem;
+}
+.section-vending-machine .con-wrap {
+  width: 60rem;
+  max-width: calc(100% - 4rem);
+  height: 80rem;
+  background: rgb(54, 49, 101);
+  border-radius: 1rem;
+  box-shadow: 0 0 0.3rem rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+}
+.section-vending-machine .con-wrap .msg-balance {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 4rem;
+}
+
+#sectionModal {
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100dvh;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+}
+#sectionModal[data-mode=true] {
+  visibility: visible;
+  opacity: 1;
+}
+#sectionModal > div {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  background: #FFF;
+  width: 40rem;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 0.3rem rgba(0, 0, 0, 0.5);
+}
+#sectionModal h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-align: center;
+  color: #111;
+}
+#sectionModal form > div {
+  display: flex;
+  gap: 1.4rem;
+}
+#sectionModal form label {
+  flex: 1 1 100%;
+  text-align: center;
+}
+#sectionModal form label input {
+  margin-top: 0.4rem;
+  border: 2px solid #000;
+  border-radius: 0.4rem;
+  padding: 1.2rem 1.4rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  width: 100%;
+  text-align: center;
+}
+#sectionModal form button {
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 4.8rem;
+  padding: 0 3.2rem;
+  color: #FFF;
+  background: #8169FF;
+  border-radius: 0.8rem;
+  margin-top: 2rem;
+}/*# sourceMappingURL=style.css.map */

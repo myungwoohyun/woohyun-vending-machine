@@ -8,23 +8,57 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <header></header>
+    <header>
         <a href="/">
             <img src="/images/protopie-logo.svg" alt="" />
         </a>
     </header>
     <main>
-        <h2>자판기 상품 설정</h2>
-        <section>
-            <form id="stockForm">
-                <label>콜라 개수: <input type="number" id="stockCola" min="0" value="5"></label><br>
-                <label>물 개수: <input type="number" id="stockWater" min="0" value="5"></label><br>
-                <label>커피 개수: <input type="number" id="stockCoffee" min="0" value="5"></label><br>
-                <button type="submit">설정 완료</button>
-            </form>
+        <section class="section-vending-machine">
+            <h2>보유하고 계신 돈이나 카드를 통해 결제 후 <br />원하시는 음료를 선택해주세요</h2>
+            <button id="btnStock">자판기 상품 설정</button>
+            <div class="con-wrap">
+                <p class="msg-balance">잔액: <span id="balance">0</span>원</p>
+                <div>
+                    <h4>음료 선택</h4>
+                    <ul>
+                        <li><button id="btn-cola">cola (1100원)</button></li>
+                        <li><button id="btn-water">water (600원)</button></li>
+                        <li><button id="btn-coffee">coffee (700원)</button></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>돈 투입</h4>
+                    <button id="btn-100">100원</button>
+                    <button id="btn-500">500원</button>
+                    <button id="btn-1000">1000원</button>
+                    <button id="btn-5000">5000원</button>
+                    <button id="btn-10000">10000원</button>
+                    <button id="btn-card">카드</button>
+                </div>
+                <div>
+                    <p id="message"></p>
+                </div>
+            </div>
+        </section>
+        <section id="sectionModal" data-mode="true">
+            <div>
+                <h2>자판기 상품 수량을 설정해주세요</h2>
+                <form id="stockForm">
+                    <div>
+                        <label>콜라 개수 <input type="number" id="stockCola" min="0" value="5"></label>
+                        <label>물 개수 <input type="number" id="stockWater" min="0" value="5"></label>
+                        <label>커피 개수 <input type="number" id="stockCoffee" min="0" value="5"></label>
+                    </div>
+                    <button type="submit">설정 완료</button>
+                </form>
+            </div>
         </section>
     </main>
-
     <script src="./js/index.js"></script>
+    <script type="module">
+        import VendingMachine from "./js/vendingMachine.js";
+        new VendingMachine();
+    </script>
 </body>
 </html>

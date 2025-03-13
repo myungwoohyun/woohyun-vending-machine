@@ -1,6 +1,8 @@
 'use strict'
 
 document.addEventListener("DOMContentLoaded", () => {
+    const stockFormModal = document.getElementById("sectionModal");
+    const stockFormButton = document.getElementById("btnStock");
     const stockForm = document.getElementById("stockForm");
     
     if (stockForm) {
@@ -12,7 +14,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 "coffee": parseInt(document.getElementById("stockCoffee").value, 10)
             };
             localStorage.setItem("vendingMachineStock", JSON.stringify(stock));
-            window.location.href = "vendingMachine.html";
+            stockFormModal.removeAttribute("data-mode");
+        });
+        stockFormButton.addEventListener("click", () => {
+            stockFormModal.setAttribute("data-mode", true);
         });
     }
 });
