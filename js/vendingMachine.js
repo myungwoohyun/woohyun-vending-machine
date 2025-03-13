@@ -18,7 +18,7 @@ class VendingMachine {
         }
         this.balance += amount;
         this.isCardPayment = false;
-        this.updateUI(`${amount}원이 투입되었습니다. 현재 잔액: ${this.balance}원`);
+        this.updateUI(`${amount}원이 투입되었습니다.`);
     }
 
     purchaseProduct(price, name) {

@@ -15,29 +15,29 @@
     </header>
     <main>
         <section class="section-vending-machine">
-            <h2>보유하고 계신 돈이나 카드를 통해 결제 후 <br />원하시는 음료를 선택해주세요</h2>
+            <h2>보유하고 계신 현금이나 카드를 통해 결제 후 <br />원하시는 음료를 선택해주세요</h2>
             <button id="btnStock">자판기 상품 설정</button>
             <div class="con-wrap">
-                <p class="msg-balance">잔액: <span id="balance">0</span>원</p>
-                <div>
+                <p class="msg-balance">balance: <span id="balance">0</span></p>
+                <p id="message">현재 잔액은 0원입니다. 현금이나 카드 결제를 해주세요</p>
+                <div class="payment">
+                    <h4>결제 방법</h4>
+                    <div>
+                        <button id="btn-100">100원</button>
+                        <button id="btn-500">500원</button>
+                        <button id="btn-1000">1000원</button>
+                        <button id="btn-5000">5000원</button>
+                        <button id="btn-10000">10000원</button>
+                        <button id="btn-card">카드</button>
+                    </div>
+                </div>
+                <div class="drink">
                     <h4>음료 선택</h4>
                     <ul>
                         <li><button id="btn-cola">cola (1100원)</button></li>
                         <li><button id="btn-water">water (600원)</button></li>
                         <li><button id="btn-coffee">coffee (700원)</button></li>
                     </ul>
-                </div>
-                <div>
-                    <h4>돈 투입</h4>
-                    <button id="btn-100">100원</button>
-                    <button id="btn-500">500원</button>
-                    <button id="btn-1000">1000원</button>
-                    <button id="btn-5000">5000원</button>
-                    <button id="btn-10000">10000원</button>
-                    <button id="btn-card">카드</button>
-                </div>
-                <div>
-                    <p id="message"></p>
                 </div>
             </div>
         </section>
